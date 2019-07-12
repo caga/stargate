@@ -1,0 +1,92 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.stargate</groupId>
+	<artifactId>stargate</artifactId>
+	<version>1</version>
+	<packaging>war</packaging>
+    <properties>
+        <jee.version>7.0</jee.version>
+		<exec.maven.version>1.6.0</exec.maven.version>
+		<postgresql.version>42.2.2</postgresql.version>
+		<hibernate.version>5.3.2.Final</hibernate.version>
+		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+		<maven.compiler.plugin.source.version>1.8</maven.compiler.plugin.source.version>
+		<maven.compiler.plugin.target.version>1.8</maven.compiler.plugin.target.version>
+		<main.class>jpa.Main2</main.class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>${postgresql.version}</version>
+	</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.5.16</version>
+		</dependency>
+		<!-- <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+	</dependency>-->
+
+	
+    </dependencies>
+    <build>
+		<finalName>stargate</finalName>
+
+	    <plugins>
+		    <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>exec-maven-plugin</artifactId>
+		<version>${exec.maven.version}</version>
+		<configuration>
+			<mainClass>${main.class}</mainClass>
+		</configuration>
+	</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven.compiler.plugin.version}</version>
+			<configuration>
+				<source>${maven.compiler.plugin.source.version}</source>
+				<target>${maven.compiler.plugin.target.version}</target>
+			</configuration>
+		</plugin>
+			<plugin>
+
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.7.v20170914</version>
+				<configuration>
+					<webApp>
+					<contextPath>/${project.build.finalName}</contextPath>
+					</webApp>
+					<stopKey>CTRL+C</stopKey>
+					<stopPort>8999</stopPort>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<scanTargets>
+					    <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
+					</scanTargets>
+			       </configuration>
+		       </plugin>
+	</plugins>
+</build>
+
+</project>
+      
+
+
