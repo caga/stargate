@@ -1,4 +1,4 @@
-/home/osman/ortakAlan/IT_SERVICES/caga_yedek/java/WebProjects/stargate/src/main/java/login/LoginAction.java
-/home/osman/ortakAlan/IT_SERVICES/caga_yedek/java/WebProjects/stargate/src/main/java/entity/Person.java
-/home/osman/ortakAlan/IT_SERVICES/caga_yedek/java/WebProjects/stargate/src/main/java/login/User.java
-/home/osman/ortakAlan/IT_SERVICES/caga_yedek/java/WebProjects/stargate/src/main/java/dataj/Dao.java
+/home/osman/calismaAlani/stargate/src/main/java/dataj/Dao.java
+/home/osman/calismaAlani/stargate/src/main/java/login/User.java
+/home/osman/calismaAlani/stargate/src/main/java/entity/Person.java
+/home/osman/calismaAlani/stargate/src/main/java/login/LoginAction.java
