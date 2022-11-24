@@ -8,7 +8,7 @@
         <jee.version>7.0</jee.version>
         <exec.maven.version>1.6.0</exec.maven.version>
         <postgresql.version>42.2.2</postgresql.version>
-        <hibernate.version>5.3.2.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <maven.compiler.plugin.source.version>1.8</maven.compiler.plugin.source.version>
         <maven.compiler.plugin.target.version>1.8</maven.compiler.plugin.target.version>
